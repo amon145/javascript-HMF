@@ -1,0 +1,144 @@
+<!--
+   HmF.html
+   
+   Copyright 2016 jazzykungfuchops <jazzykungfuchops@jazzykungfuchops-desktop>
+   
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
+   
+   
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Reactor Test</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+
+<body>
+	<style type='text/css'>
+		body {
+				font-family:Tahoma, Geneva, sans-serif;
+			
+			
+			}
+		
+		#square-box {
+				width: 200px;
+				height: 200px;
+				background-color: tomato;
+				display: none;
+				position: relative;
+			}
+			
+	
+	
+	
+	</style>
+	<h2>Reaction Test</h2>
+	<p>Quick, Click on the Squares and circle to see how fast you can click!</p>
+	<p><strong>Your Time</strong>: <span id="time">0</span>s</p>
+	
+	<div id="square-box"></div>
+		
+	
+
+	
+	
+	
+	
+	<script type="text/javascript">
+		
+			function getRandomColor() {
+				var letters = '0123456789ABCDEF'.split('');
+				var color = '#';
+				
+				for(var i = 0; i < 6; i++) {
+						color += letters[Math.round(Math.random() * 15)];
+					
+					}
+					return color;
+			
+			}
+			
+			
+		
+		var clickTime;
+		
+		var createdTime;
+		
+		var reactionTime;
+		
+		Date.now();
+		
+		function makeBox() {
+			
+					createdTime=Date.now();
+			
+					var time=Math.random();
+			
+					 time=time*5000
+			
+			
+			
+				 setTimeout(function() {
+					 
+					 if(Math.random()>0.5) {
+						document.getElementById("square-box").style.borderRadius='100px';
+					 
+				 } else {
+					 document.getElementById("square-box").style.borderRadius='0';
+					 
+					 }
+					 var top=Math.random();
+					 
+					 top=top*300;
+					 
+					 var left=Math.random();
+					 
+					 left=left*500; 
+					 
+					 document.getElementById("square-box").style.top=top+"px"
+					 document.getElementById("square-box").style.left=left+"px"
+					document.getElementById("square-box").style.backgroundColor=getRandomColor();
+					
+					document.getElementById("square-box").style.display="block";
+
+					createdTime=Date.now();	
+				}, time);
+			}
+		
+		
+		document.getElementById("square-box").onclick= function() {
+			clickedTime=Date.now();
+			
+			reactionTime=(clickedTime-createdTime)/1000;
+			
+			document.getElementById("time").innerHTML=reactionTime;
+			
+			this.style.display="none"
+			
+			makeBox();
+		}
+		
+	
+		makeBox();
+	</script>
+</body>
+
+</html>

@@ -31,53 +31,37 @@
 </head>
 
 <body>
+	<style type='text/css'>
+		#square-box {
+				width: 200px;
+				height: 200px;
+				background-color: red;
+			
+			}
 	
+	
+	
+	</style>
+	
+	
+	<div id="square-box"></div>
+	
+	<p id="para">How many fingers are you holding up?</p>
+	<input id="myNumber" />
+	
+	<button id="guess">Guess!</button>
 
-
-		  <p>
-			My Favorite Fighting Game
-		  </p>
-		<input id="answer" />
-
-		<button id="myButton">
-		Submit
-		</button>
-
-			<ul>
-				<li>Tekken", "Street Fighter", "Killer Instinct", "King of Fighters"</li>
-			</ul>
-	
-	
-	
-	
 	
 	
 	
 	
 	<script type="text/javascript">
-		
-		document.getElementById("myButton").onclick=function(){
-		var array= ["Tekken", "Street Fighter", "Killer Instinct", "King of Fighters"]
-		var x=Math.random();
-		x=4*x;
-		x=Math.floor(x);
-		
-		
-		var y=array[x];
-		
-		
-		
-
-		if (y==document.getElementById("answer").value){
-		alert("That's correct!" + y);
-  
- 
-		}	else {
-			alert("That's wrong! its" + " " + y)
- 
-		}
-
-		}
+		function alertMe(x, y) {
+				return(x + y)
+			
+			};
+			
+			document.getElementById('para').innerHTML=alertMe(54, 8);
 	</script>
 </body>
 

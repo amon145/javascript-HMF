@@ -31,53 +31,40 @@
 </head>
 
 <body>
+	<p>How many fingers are you holding up?</p>
+	<input id="myNumber" />
 	
+	<button id="guess">Guess!</button>
 
-
-		  <p>
-			My Favorite Fighting Game
-		  </p>
-		<input id="answer" />
-
-		<button id="myButton">
-		Submit
-		</button>
-
-			<ul>
-				<li>Tekken", "Street Fighter", "Killer Instinct", "King of Fighters"</li>
-			</ul>
-	
-	
-	
-	
 	
 	
 	
 	
 	<script type="text/javascript">
-		
-		document.getElementById("myButton").onclick=function(){
-		var array= ["Tekken", "Street Fighter", "Killer Instinct", "King of Fighters"]
-		var x=Math.random();
-		x=4*x;
-		x=Math.floor(x);
-		
-		
-		var y=array[x];
-		
-		
-		
-
-		if (y==document.getElementById("answer").value){
-		alert("That's correct!" + y);
-  
- 
-		}	else {
-			alert("That's wrong! its" + " " + y)
- 
-		}
-
-		}
+			document.getElementById("guess").onclick=function() {
+				
+				var gotit = false; var guesses=1; var x;
+				
+				while (gotit==false){
+					x=Math.random();
+					
+					
+					x=6*x;
+					
+					x=Math.floor(x);
+					
+					if (document.getElementById("myNumber").value==x) {
+						
+						gotit=true
+					
+					} else {
+						guesses++;
+					
+					
+					}
+					alert("I got it it was a"+" "+x+"."+ "It only took me"+guesses+" guesses!");
+					
+	           }
 	</script>
 </body>
 

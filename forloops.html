@@ -32,52 +32,28 @@
 
 <body>
 	
+	<p id="arrayString"></p>
 
-
-		  <p>
-			My Favorite Fighting Game
-		  </p>
-		<input id="answer" />
-
-		<button id="myButton">
-		Submit
-		</button>
-
-			<ul>
-				<li>Tekken", "Street Fighter", "Killer Instinct", "King of Fighters"</li>
-			</ul>
-	
-	
-	
-	
 	
 	
 	
 	
 	<script type="text/javascript">
 		
-		document.getElementById("myButton").onclick=function(){
-		var array= ["Tekken", "Street Fighter", "Killer Instinct", "King of Fighters"]
-		var x=Math.random();
-		x=4*x;
-		x=Math.floor(x);
+	var arrayString ="";	
+	var myArray=["Billi", "Milli", "Trilli"];
+	
+	
 		
-		
-		var y=array[x];
-		
-		
-		
-
-		if (y==document.getElementById("answer").value){
-		alert("That's correct!" + y);
-  
- 
-		}	else {
-			alert("That's wrong! its" + " " + y)
- 
+		for (var i=0; i<myArray.length; i++) {
+			
+			arrayString=arrayString+myArray[i]+ " ";
+			
 		}
-
-		}
+		
+		document.getElementById("arrayString").innerHTML=arrayString;
+		
+	
 	</script>
 </body>
 
