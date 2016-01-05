@@ -1,0 +1,78 @@
+<!--
+   HmF.html
+   
+   Copyright 2016 jazzykungfuchops <jazzykungfuchops@jazzykungfuchops-desktop>
+   
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
+   
+   
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Javascript How Many Fingers Game!</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+
+<body>
+	
+
+
+		  <p>
+			How many finger Im holding up?
+		  </p>
+		<input id="answer" />
+
+		<button id="myButton">
+		Submit
+		</button>
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+		
+		document.getElementById("myButton").onclick=function(){
+		var x=Math.random();
+
+		x=6*x;
+		alert(x);
+
+		x=Math.floor(x);
+
+		if (x==document.getElementById("answer").value){
+		alert("That's correct!");
+  
+ 
+		}	else {
+			alert("That's wrong!" + " " + x)
+ 
+		}
+
+		}
+	</script>
+</body>
+
+</html>
